@@ -59,7 +59,7 @@ private:
     std::string pavarde = " ";/**>Studento pavarde.*/
     float vidurkis = 0.0;/**>Studento pazymiu vidurkis.*/
     float mediana = 0.0;/**>Studento pazymiu mediana.*/
-    Vector<int> pazymiai;/**>Studento pazymiai.*/
+    std::vector<int> pazymiai;/**>Studento pazymiai.*/
     double egzaminas{};/**>Studento egzamino ivertinimas.*/
 public:
 
@@ -101,7 +101,7 @@ public:
      *
      * @param pazVector
      */
-    void setPazymiaiVector(const Vector<int>& pazVector);
+    void setPazymiaiVector(const std::vector<int>& pazVector);
 
     /**
      * @brief funkcija setPazymiai - priskiriami pazymiai (int tipo).
@@ -114,7 +114,7 @@ public:
      * @brief funkcija getPazymiai - grazina pazymius.
      * @return std::vector<int> pazymiai
      */
-    Vector<int> getPazymiai() const;
+    std::vector<int> getPazymiai() const;
 
     /**
      * @brief funkcija resizePazymiai - pakeicia std::vector<int> pazymiai dydi.

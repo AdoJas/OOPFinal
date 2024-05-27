@@ -33,9 +33,9 @@ int main()
     string ivedimasKonteineris = " ";
     string failoGeneravimoPasirinkimas = " ";
 
-    Vector<studentasV> grupeVector;
-    Vector<studentasV> grupeBad;
-    Vector<studentasV> grupeGood;
+    vector<studentasV> grupeVector;
+    vector<studentasV> grupeBad;
+    vector<studentasV> grupeGood;
 
     //Atkomentavus gauname errora, Zmogus yra abstrakti klase
     //Zmogus grupeZmogus;
@@ -72,7 +72,7 @@ do{
             studentasV stud = studentasV();
             generateRandomNames(stud);
             generateRandomGrades(stud);
-            grupeVector.PushBack(stud);
+            grupeVector.push_back(stud);
         }
         generalVidurkisCalculate(grupeVector);
         generalMedianaCalculate(grupeVector);
@@ -119,42 +119,6 @@ do{
 
     }
     case 7:{
-        int alokacijaSTD = 0, alokacijaVector = 0;
-        for(int x = 0; x < 5; x++){
-            auto start = std::chrono::high_resolution_clock::now();
-                unsigned int sz = pow(10, 3+x);
-                std::vector<int> v1;
-                for (int i = 1; i <= sz; ++i){
-                    v1.push_back(i);
-                    if(v1.size() == v1.capacity()){
-                        ++alokacijaSTD;
-                }
-            }
-            auto end = std::chrono::high_resolution_clock::now();
-            std::chrono::duration<double> diff = end-start;
-            cout << "std::vector<int> " << sz << " elementu perskirstymu: " << alokacijaSTD << endl;
-
-            alokacijaSTD = 0;
-        }
-        cout<< "--------------------------------" << endl;
-        for(int x = 0; x < 5; x++){
-            auto start = std::chrono::high_resolution_clock::now();
-            unsigned int sz = pow(10, 3+x);
-            Vector<int> v1;
-            for (int i = 1; i <= sz; ++i){
-                v1.PushBack(i);
-                if(v1.Size() == v1.Capacity()){
-                    alokacijaVector++;
-                }
-            }
-            auto end = std::chrono::high_resolution_clock::now();
-            std::chrono::duration<double> diff = end-start;
-            cout << "Vector<int> " << sz << " elementu perskirstymu :  " << alokacijaVector << endl;
-            alokacijaVector = 0;
-        }
-
-    }
-    case 8:{
         printf("Sekmingai baigete darba!!!\n");
         return 0;
         break;
@@ -167,13 +131,13 @@ do{
 
     }
     printf("--------------------------------------------------\n");
-    if (stoi(pasirinkimas) == 8) {
+    if (stoi(pasirinkimas) == 7) {
         break;
     }
 
-    grupeVector.Clear();
+    grupeVector.clear();
 
-}while (stoi(pasirinkimas) != 8);
+}while (stoi(pasirinkimas) != 7);
 
     return 0;
 }

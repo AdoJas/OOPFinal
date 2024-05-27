@@ -15,7 +15,7 @@ using namespace std;
  * @param grupeVector studentu obejektu vektorius
  * @param n studentu kiekis
  */
-void ivedimas(Vector<studentasV>& grupeVector, int n);
+void ivedimas(vector<studentasV>& grupeVector, int n);
 
 /**
  * @brief Studentu duomenu ivedimas zinant studentu skaiciu
@@ -23,18 +23,18 @@ void ivedimas(Vector<studentasV>& grupeVector, int n);
  * @param n studentu kiekis
  * @param pazymiuKiekis pazymiu kiekis
  */
-void ivedimasV(Vector<studentasV>& grupeVector, studentasV& stud, int studentoNr, int pazymiuKiekis);
+void ivedimasV(vector<studentasV>& grupeVector, studentasV& stud, int studentoNr, int pazymiuKiekis);
 /**
  * @brief Studentu duomenu ivedimas nezinant studentu skaiciaus
  * @param grupeVector studentu obejektu vektorius
  */
-void ivedimasNoSize(Vector<studentasV>& grupeVector);
+void ivedimasNoSize(vector<studentasV>& grupeVector);
 
 /**
  * @brief Ivestam studentui generuojami atsitiktiniai pazymiai
  * @param grupeVector studentu obejektu vektorius
  */
-void ivedimasCaseTwo(Vector<studentasV>& grupeVector);
+void ivedimasCaseTwo(vector<studentasV>& grupeVector);
 
 /**
  * @brief studentu duomenu nuskaitymas is failo, kiekvieno studento vidurkio ir medianos apskaiciavimas
@@ -44,7 +44,7 @@ void ivedimasCaseTwo(Vector<studentasV>& grupeVector);
  * @param fakePazymiai - netinkamu pazymiu skaicius
  * @param laikasSkaiciavimas - skaiciavimo trukme
  */
-void fileReading(Vector<studentasV>& grupeVector, const string& failas, double & laikasSkaitymas, int& fakePazymiai, double& laikasSkaiciavimas);
+void fileReading(vector<studentasV>& grupeVector, const string& failas, double & laikasSkaitymas, int& fakePazymiai, double& laikasSkaiciavimas);
 
 /**
  * @brief studentui sugeneruojami atsitiktiniai pazymiai
@@ -62,13 +62,13 @@ void generateRandomNames(studentasV &stud);
  * @brief visiems grupeVector studento objektams apskaiciuojamas vidurkis
  * @param grupeVector studentu obejektu vektorius
  */
-void generalVidurkisCalculate(Vector<studentasV>& grupeVector);
+void generalVidurkisCalculate(vector<studentasV>& grupeVector);
 
 /**
  * @brief visiems grupeVector studento objektams apskaiciuojama mediana
  * @param grupeVector
  */
-void generalMedianaCalculate(Vector<studentasV>& grupeVector);
+void generalMedianaCalculate(vector<studentasV>& grupeVector);
 
 /**
  *
@@ -79,7 +79,7 @@ void generalMedianaCalculate(Vector<studentasV>& grupeVector);
  * @param fakePazymiai netinkamu pazymiu skaicius
  * @param iteracija iteracija parodo, su kuriais failais dirba programa
  */
-void isvedimas(Vector<studentasV> grupeVector, double laikasSkaitymas, double laikasSkaiciavimas, double laikasRusiavimas, int fakePazymiai, int iteracija);
+void isvedimas(vector<studentasV> grupeVector, double laikasSkaitymas, double laikasSkaiciavimas, double laikasRusiavimas, int fakePazymiai, int iteracija);
 
 /**
  * @brief rankiniu budu ivedamu studentu pazymiu ivedimo ir ju patikimumo tikrinimo funkcija
@@ -93,7 +93,7 @@ void readNumbersV(studentasV& stud, int maxItems);
  * @param choice pasirinikimas, pagal koki kriteriju norima rusiuoti studentu objektu vektoriu
  * @param grupeVector studentu obejektu vektorius
  */
-void sortInput(string& choice, Vector<studentasV>& grupeVector);
+void sortInput(string& choice, vector<studentasV>& grupeVector);
 
 /**
  * @brief funkcija apjungianti duomenu nuskaityma ir duomenu rusiavima
@@ -105,7 +105,7 @@ void sortInput(string& choice, Vector<studentasV>& grupeVector);
  * @param ivedimasKonteineris konteinerio pasirinkimo kintamasis
  * @param choice sortInput pasirinkimo kintamasis
  */
-void failoNuskaitymasRusiavimas(Vector<studentasV>& grupeVector, Vector<studentasV>& grupeBad, Vector<studentasV>& grupeGood, int i, string vidMed, string ivedimasKonteineris, string choice);
+void failoNuskaitymasRusiavimas(vector<studentasV>& grupeVector, vector<studentasV>& grupeBad, vector<studentasV>& grupeGood, int i, string vidMed, string ivedimasKonteineris, string choice);
 
 /**
  * @brief funkcija kuri isveda studentu objektu duomenis i faila
@@ -115,7 +115,7 @@ void failoNuskaitymasRusiavimas(Vector<studentasV>& grupeVector, Vector<studenta
  * @param vidMed vidurkio mediano pasirinkimo kintamasis
  * @param choice sortInput pasirinkimo kintamasis
  */
-void isvedimasFailai(Vector<studentasV>& grupeVector, Vector<studentasV>& grupeBad, int i, string& vidMed, string& choice);
+void isvedimasFailai(vector<studentasV>& grupeVector, vector<studentasV>& grupeBad, int i, string& vidMed, string& choice);
 
 /**
  * @brief funkcija skirta pasirinkti vidurki arba mediana
@@ -132,7 +132,7 @@ void pasirinkimasVidMed(string& vidMed);
  * @param grupeGood geru studentu objektu vektorius
  * @param ivedimasKonteineris  ar noresite rusiuoti duomenis i du naujus konteinerius ar rusiuoti i sena ir viena nauja konteineri
  */
-void vektoriaiMain(string vidMed, string choice, Vector<studentasV>& grupeVector, Vector<studentasV>& grupeBad, Vector<studentasV>& grupeGood, string ivedimasKonteineris);
+void vektoriaiMain(string vidMed, string choice, vector<studentasV>& grupeVector, vector<studentasV>& grupeBad, vector<studentasV>& grupeGood, string ivedimasKonteineris);
 
 /**
  * @brief funkcija, kuri panaudodama partition isrusiuoja grupeVector i du naujus konteinerius
@@ -141,7 +141,7 @@ void vektoriaiMain(string vidMed, string choice, Vector<studentasV>& grupeVector
  * @param grupeGood geru studentu objektu vektorius
  * @param grupeBad blogu studentu objektu vektorius
  */
-void vectorPartition(string vidMed, Vector<studentasV>& grupeVector, Vector<studentasV>& grupeGood, Vector<studentasV>& grupeBad);
+void vectorPartition(string vidMed, vector<studentasV>& grupeVector, vector<studentasV>& grupeGood, vector<studentasV>& grupeBad);
 
 /**
  * @brief funkcija, kuri panaudodama partition isrusiuoja grupeVector i viena nauja ir viena sena konteineri
@@ -149,4 +149,4 @@ void vectorPartition(string vidMed, Vector<studentasV>& grupeVector, Vector<stud
  * @param grupeVector studentu objektu vektorius
  * @param grupeBad blogu studentu objektu vektorius
  */
-void vectorPartition2(string vidMed, Vector<studentasV>& grupeVector, Vector<studentasV>& grupeBad);
+void vectorPartition2(string vidMed, vector<studentasV>& grupeVector, vector<studentasV>& grupeBad);

@@ -16,18 +16,18 @@ void studentasV::setPavarde(std::string pavarde) {
 std::string studentasV::getPavarde() const{
     return pavarde;
 }
-void studentasV::setPazymiaiVector(const Vector<int>& pazVector) {
+void studentasV::setPazymiaiVector(const std::vector<int>& pazVector) {
     for (auto& elem : pazVector) {
-        pazymiai.PushBack(elem);
+        pazymiai.push_back(elem);
     }
 }
 void studentasV::setPazymiai(int paz){
-    pazymiai.PushBack(paz);
+    pazymiai.push_back(paz);
 }
 void studentasV::resizePazymiai(int n) {
-    pazymiai.Resize(n);
+    pazymiai.resize(n);
 }
-Vector<int> studentasV::getPazymiai() const {
+std::vector<int> studentasV::getPazymiai() const {
     return pazymiai;
 }
 
@@ -38,17 +38,17 @@ int studentasV::getEgzaminas() const{
     return egzaminas;
 }
 void studentasV::setVidurkis(){
-    if (pazymiai.isEmpty()) {
+    if (pazymiai.empty()) {
         vidurkis = egzaminas * 0.6;
     } else {
         double suma = std::accumulate(pazymiai.begin(), pazymiai.end(), 0.0);
-        vidurkis = (suma / pazymiai.Size()) * 0.4 + egzaminas * 0.6;
+        vidurkis = (suma / pazymiai.size()) * 0.4 + egzaminas * 0.6;
     }
 }
 void studentasV::setMediana() {
     std::sort(pazymiai.begin(), pazymiai.end());
 
-    size_t size = pazymiai.Size();
+    size_t size = pazymiai.size();
     if (size == 0) {
         mediana = -1;
     } else if (size % 2 == 0) {
@@ -65,7 +65,7 @@ float studentasV::getMediana() const{
 }
 
 void studentasV::setAtsitiktiniaiPazymiai() {
-    pazymiai.Resize(rand() % 10 + 1);
+    pazymiai.resize(rand() % 10 + 1);
     for (int & paz : pazymiai) {
         paz = rand() % 10 + 1;
     }
@@ -129,7 +129,7 @@ studentasV& studentasV::operator=(studentasV&& kita) noexcept {
 
         kita.vardas.clear();
         kita.pavarde.clear();
-        kita.pazymiai.Clear();
+        kita.pazymiai.clear();
         kita.vidurkis = 0.0;
         kita.mediana = 0.0;
         kita.egzaminas = 0.0;
@@ -138,7 +138,7 @@ studentasV& studentasV::operator=(studentasV&& kita) noexcept {
 }
 //Destruktorius
 studentasV::~studentasV(){
-    pazymiai.Clear();
+    pazymiai.clear();
 }
 //output streamo operatorius <<
 std::ostream& operator<<(std::ostream& outputas, const studentasV &studentas) {
@@ -151,10 +151,10 @@ std::ostream& operator<<(std::ostream& outputas, const studentasV &studentas) {
 //input streamo operatorius >>
 std::istream &operator>>(std::istream &inputas, studentasV &studentas){
     inputas >> studentas.vardas >> studentas.pavarde >> studentas.egzaminas;
-    studentas.pazymiai.Clear();
+    studentas.pazymiai.clear();
     int pazymys;
     while (inputas >> pazymys) {
-        studentas.pazymiai.PushBack(pazymys);
+        studentas.pazymiai.push_back(pazymys);
     }
     return inputas;
 }

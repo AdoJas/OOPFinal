@@ -16,80 +16,10 @@ add_executable(OOPuzd
         "Program.cpp"
         "studentas.h"
         "studentas.cpp"
-        "vectorClass.h"
-        "vectorClass.cpp"
+        vectorClass.h
 )
 #target_link_libraries(OOPuzd gtest gtest_main)
 if(CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET OOPuzd PROPERTY CXX_STANDARD 20)
-endif()
-
-add_executable(OOPuzdO3
-        "Common.cpp"
-        "Common.h"
-        "PazymiaiVectors.cpp"
-        "PazymiaiVectors.h"
-        "Program.cpp"
-        "studentas.h"
-        "studentas.cpp"
-        "vectorClass.h"
-        "vectorClass.cpp"
-)
-
-if(CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET OOPuzdO3 PROPERTY CXX_STANDARD 20)
-endif()
-
-# Add the optimization flag
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-  target_compile_options(OOPuzdO3 PRIVATE -O3)
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-  target_compile_options(OOPuzdO3 PRIVATE /O3)
-endif()
-
-add_executable(OOPuzdO2
-        "Common.cpp"
-        "Common.h"
-        "PazymiaiVectors.cpp"
-        "PazymiaiVectors.h"
-        "Program.cpp"
-        "studentas.h"
-        "studentas.cpp"
-        "vectorClass.h"
-        "vectorClass.cpp"
-)
-
-if(CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET OOPuzdO2 PROPERTY CXX_STANDARD 20)
-endif()
-
-# Add the optimization flag
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-  target_compile_options(OOPuzdO2 PRIVATE -O2)
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-  target_compile_options(OOPuzdO2 PRIVATE /O2)
-endif()
-
-add_executable(OOPuzdO1
-        "Common.cpp"
-        "Common.h"
-        "PazymiaiVectors.cpp"
-        "PazymiaiVectors.h"
-        "Program.cpp"
-        "studentas.h"
-        "studentas.cpp"
-        "vectorClass.h"
-        "vectorClass.cpp"
-)
-
-if(CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET OOPuzdO1 PROPERTY CXX_STANDARD 20)
-endif()
-
-# Add the optimization flag
-if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-  target_compile_options(OOPuzdO1 PRIVATE -O1)
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-  target_compile_options(OOPuzdO1 PRIVATE /O1)
 endif()
 
