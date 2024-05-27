@@ -10,40 +10,42 @@
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <numeric>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}studentas.h"{}}}
-\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ ivedimas(vector<studentasV>\&\ grupeVector,\ \textcolor{keywordtype}{int}\ n);}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ ivedimasNoSize(vector<studentasV>\&\ grupeVector);}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ ivedimasCaseTwo(vector<studentasV>\&\ grupeVector);}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ fileReading(vector<studentasV>\&\ grupeVector,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ failas,\ \textcolor{keywordtype}{double}\ \&\ laikasSkaitymas,\ \textcolor{keywordtype}{int}\&\ fakePazymiai,\ \textcolor{keywordtype}{double}\&\ laikasSkaiciavimas);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ generateRandomGrades(\mbox{\hyperlink{classstudentas_v}{studentasV}}\ \&stud);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ generateRandomNames(\mbox{\hyperlink{classstudentas_v}{studentasV}}\ \&stud);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ generalVidurkisCalculate(vector<studentasV>\&\ grupeVector);}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ generalMedianaCalculate(vector<studentasV>\&\ grupeVector);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ isvedimas(vector<studentasV>\ grupeVector,\ \textcolor{keywordtype}{double}\ laikasSkaitymas,\ \textcolor{keywordtype}{double}\ laikasSkaiciavimas,\ \textcolor{keywordtype}{double}\ laikasRusiavimas,\ \textcolor{keywordtype}{int}\ fakePazymiai,\ \textcolor{keywordtype}{int}\ iteracija);}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ readNumbersV(\mbox{\hyperlink{classstudentas_v}{studentasV}}\&\ stud,\ \textcolor{keywordtype}{int}\ maxItems);}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ sortInput(\textcolor{keywordtype}{string}\&\ choice,\ vector<studentasV>\&\ grupeVector);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00100\ \textcolor{keywordtype}{void}\ failoNuskaitymasRusiavimas(vector<studentasV>\&\ grupeVector,\ vector<studentasV>\&\ grupeBad,\ vector<studentasV>\&\ grupeGood,\ \textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{string}\ vidMed,\ \textcolor{keywordtype}{string}\ ivedimasKonteineris,\ \textcolor{keywordtype}{string}\ choice);}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ isvedimasFailai(vector<studentasV>\&\ grupeVector,\ vector<studentasV>\&\ grupeBad,\ \textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{string}\&\ vidMed,\ \textcolor{keywordtype}{string}\&\ choice);}
-\DoxyCodeLine{00111\ }
-\DoxyCodeLine{00116\ \textcolor{keywordtype}{void}\ pasirinkimasVidMed(\textcolor{keywordtype}{string}\&\ vidMed);}
-\DoxyCodeLine{00117\ }
-\DoxyCodeLine{00127\ \textcolor{keywordtype}{void}\ vektoriaiMain(\textcolor{keywordtype}{string}\ vidMed,\ \textcolor{keywordtype}{string}\ choice,\ vector<studentasV>\&\ grupeVector,\ vector<studentasV>\&\ grupeBad,\ vector<studentasV>\&\ grupeGood,\ \textcolor{keywordtype}{string}\ ivedimasKonteineris);}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00136\ \textcolor{keywordtype}{void}\ vectorPartition(\textcolor{keywordtype}{string}\ vidMed,\ vector<studentasV>\&\ grupeVector,\ vector<studentasV>\&\ grupeGood,\ vector<studentasV>\&\ grupeBad);}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ vectorPartition2(\textcolor{keywordtype}{string}\ vidMed,\ vector<studentasV>\&\ grupeVector,\ vector<studentasV>\&\ grupeBad);}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}vectorClass.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ ivedimas(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ ivedimasV(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \mbox{\hyperlink{classstudentas_v}{studentasV}}\&\ stud,\ \textcolor{keywordtype}{int}\ studentoNr,\ \textcolor{keywordtype}{int}\ pazymiuKiekis);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ ivedimasNoSize(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ ivedimasCaseTwo(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ fileReading(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ failas,\ \textcolor{keywordtype}{double}\ \&\ laikasSkaitymas,\ \textcolor{keywordtype}{int}\&\ fakePazymiai,\ \textcolor{keywordtype}{double}\&\ laikasSkaiciavimas);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ generateRandomGrades(\mbox{\hyperlink{classstudentas_v}{studentasV}}\ \&stud);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ generateRandomNames(\mbox{\hyperlink{classstudentas_v}{studentasV}}\ \&stud);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ generalVidurkisCalculate(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ generalMedianaCalculate(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ isvedimas(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\ grupeVector,\ \textcolor{keywordtype}{double}\ laikasSkaitymas,\ \textcolor{keywordtype}{double}\ laikasSkaiciavimas,\ \textcolor{keywordtype}{double}\ laikasRusiavimas,\ \textcolor{keywordtype}{int}\ fakePazymiai,\ \textcolor{keywordtype}{int}\ iteracija);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{void}\ readNumbersV(\mbox{\hyperlink{classstudentas_v}{studentasV}}\&\ stud,\ \textcolor{keywordtype}{int}\ maxItems);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}\ sortInput(\textcolor{keywordtype}{string}\&\ choice,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ failoNuskaitymasRusiavimas(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeBad,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeGood,\ \textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{string}\ vidMed,\ \textcolor{keywordtype}{string}\ ivedimasKonteineris,\ \textcolor{keywordtype}{string}\ choice);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ isvedimasFailai(\mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeBad,\ \textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{string}\&\ vidMed,\ \textcolor{keywordtype}{string}\&\ choice);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{void}\ pasirinkimasVidMed(\textcolor{keywordtype}{string}\&\ vidMed);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{void}\ vektoriaiMain(\textcolor{keywordtype}{string}\ vidMed,\ \textcolor{keywordtype}{string}\ choice,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeBad,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeGood,\ \textcolor{keywordtype}{string}\ ivedimasKonteineris);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ vectorPartition(\textcolor{keywordtype}{string}\ vidMed,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeGood,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeBad);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ vectorPartition2(\textcolor{keywordtype}{string}\ vidMed,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeVector,\ \mbox{\hyperlink{class_vector}{Vector<studentasV>}}\&\ grupeBad);}
 
 \end{DoxyCode}

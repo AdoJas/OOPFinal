@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['2_20tt_20void_20popback_20tt_0',['2. &lt;tt&gt;void PopBack()&lt;/tt&gt;',['../md__c_1_2_users_2adoma_2_c_lion_projects_2obj_prog_uzd_o_o_p_2_r_e_a_d_m_e.html#autotoc_md6',1,'']]]
+  ['back_0',['Back',['../class_vector.html#acc103546db2209316965577f3146e195',1,'Vector']]],
+  ['begin_1',['begin',['../class_vector.html#a466e8c045ea10d62c28b689888e9fe5a',1,'Vector::begin()'],['../class_vector.html#a514c5f6246f07f0012f1d00912838b19',1,'Vector::begin() const']]]
 ];
