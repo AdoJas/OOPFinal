@@ -16,6 +16,7 @@
 - [x] [Paskirstymu kiekis std::vector ir Vector konteineriuose](#paskirstymu-kiekis-stdvector-ir-vector-konteineriuose)
 - [x] [Programos greitis](#programos-greitis)
 - [x] [Testavimas - GoogleTest Vector klase](#testavimas)
+- [x] [Instaliacija](#instaliacija)
 - [x] [Ka daro programa?](#ka-daro-programa)
 - [x] [Kaip pasinaudoti kodu? (Windows ir macOS)](#kaip-pasinaudoti-kodu-windows-ir-macos)
 
@@ -371,6 +372,12 @@ EXPECT_EQ(v[0], 1);
 [==========] 13 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 13 tests.
 ```
+# Instaliacija
+> 1. Atsisiusti projekto failus is GitHub.
+> 2. Paspausti ant outputas.exe failo.
+> 3. Failai bus suinstaliuoti i jusu kompiuteri.
+> 4. Smagaus naudojimo!!!
+
 # ***Ka daro programa?***
 >1. Leidzia dinamiskai arba statiskai ivesti studentu duomenis ir dirbti su jais.
 >2. Leidzia ivedus studentu vardus ir pavardes generuoti ju pazymius ir dirbti su jais.
